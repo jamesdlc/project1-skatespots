@@ -2,7 +2,6 @@ var db = require('../models');
 
 // GET /api/skatespots
 function index(req, res) {
-  // FILL ME IN !
   db.Skatespot.find({}, function(err, skatespot){
     if(err){
       res.send(err);
@@ -10,6 +9,16 @@ function index(req, res) {
     res.json(skatespot);
   });
 }
+
+//GET by id /api/skatespots/:id
+function show(req, res) {
+  db.Skatespot.findById(req.params.skatespotId, function(err, foundSkatespot) {
+    if(err) {
+      console.log('albumsSkatespot.show error', err);
+    }
+    console.log('albumsController.show responding with', foundSkatespot);
+    res.json(foundSkatespot);
+  });}
 
 // POST /api/skatespots
 function create(req, res){
@@ -23,7 +32,10 @@ function create(req, res){
   });
 }
 
+
+
 module.exports = {
   create: create,
-  index: index
+  index: index,
+  show: show
 };

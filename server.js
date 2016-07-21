@@ -20,6 +20,9 @@ app.get('/', function homepage (req, res) {
 //Index Show All
 app.get('/api/skatespots', controllers.skatespots.index);
 
+//Show by Id
+app.get('/api/skatespots/:skatespotId', controllers.skatespots.show);
+
 //POST Create one
 app.post('/api/skatespots', controllers.skatespots.create);
 
