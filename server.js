@@ -16,15 +16,16 @@ var controllers = require('./controllers');
 app.get('/', function homepage (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
-
 //Index Show All
 app.get('/api/skatespots', controllers.skatespots.index);
-
 //Show by Id
 app.get('/api/skatespots/:skatespotId', controllers.skatespots.show);
-
 //POST Create one
 app.post('/api/skatespots', controllers.skatespots.create);
+//Delete by ID
+app.delete('/api/skatespots/:skatespotId', controllers.skatespots.destroy);
+//Updated by ID
+app.put('/api/skatespots/:skatespotId', controllers.skatespots.update);
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is running on http://localhost:3000/');
