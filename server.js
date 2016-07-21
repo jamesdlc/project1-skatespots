@@ -12,14 +12,16 @@ app.use('/vendor', express.static(__dirname + '/bower_components'));
 var controllers = require('./controllers');
 
 //Routes
-
+//GET Home PAge
 app.get('/', function homepage (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-
-//JSON API Endpoints
+//Index Show All
 app.get('/api/skatespots', controllers.skatespots.index);
+
+//POST Create one
+app.post('/api/skatespots', controllers.skatespots.create);
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is running on http://localhost:3000/');
