@@ -39,25 +39,16 @@ function create(req, res) {
 //PUT /api/skatespots/:id update existing spot
 function update(req, res) {
     console.log('updating with data', req.body);
-    db.Skatespot.findById(req.params.skatespotId, function(err, skateSpotToUpdate) {
+    var updateData = req.body;
+    var id = req.params.skatespotId;
+    console.log(id);
+    db.Skatespot.findByIdAndUpdate(id, updateData, {new: true}, function(err, savedUpdatedSkatespot) {
         if (err) {
             console.log('skateSpotToUpdate error', err);
         }
-        skateSpotToUpdate.name = req.body.name;
-        skateSpotToUpdate.location = req.body.location;
-        skateSpotToUpdate.security_guards = req.body.security_guards;
-        skateSpotToUpdate.difficulty_level = req.body.difficulty_level;
-        skateSpotToUpdate.features = req.body.features;
-        skateSpotToUpdate.pictures = req.body.pictures;
-        skateSpotToUpdate.tips = req.body.tips;
-        skateSpotToUpdate.save(function(err, savedUpdatedSkatespot) {
-            if (err) {
-                console.log('saving edited Skatespot failed');
-            }
-            res.json(savedUpdatedSkatespot);
-        });
+        console.log(savedUpdatedSkatespot);
+        res.json(savedUpdatedSkatespot);
     });
-
 }
 
 // Delete by ID
