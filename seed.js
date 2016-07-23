@@ -4,7 +4,7 @@ var skateSpotList =[
   {
     name:"anchorage park",
     location: "Alaska",
-    security_guards: "True",
+    security_guards: "False",
     difficulty_level: "Intermediate",
     features: "five-stair, handrail, ledge",
     pictures:["/images/alaska1.jpg", "/images/alaska2.jpg","/images/alaska3.jpg"],
@@ -20,6 +20,27 @@ var skateSpotList =[
     tips:"It gets cold towards the evening... bring a sweater"
   }
 ];
+var cityList =[
+  {
+    name:"Milpitas"
+  },
+  {
+    name:"Detroit"
+  }
+];
+db.City.remove({}, function(err, city) {
+  if(err) {
+    console.log('Error occured in remove', err);
+  }
+  else {
+    console.log('removed all Cities');
+    db.City.create(cityList, function(err, city){
+      if (err){ return console.log("Error: ", err); }
+      console.log("Created new Cities", city);
+      process.exit();
+    });
+  }
+});
 
 
 db.Skatespot.remove({}, function(err, skatespot) {

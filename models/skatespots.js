@@ -1,8 +1,10 @@
 var mongoose = require("mongoose");
+var City = require("./cities.js");
 var Schema = mongoose.Schema;
 
 var SkatespotsSchema = new Schema({
     name: String,
+    // city: {type: Schema.Types.ObjectId, ref: 'City'},
     location: String,
     security_guards: Boolean,
     difficulty_level: String,

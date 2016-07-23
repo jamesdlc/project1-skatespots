@@ -1,49 +1,43 @@
 var db = require('../models');
 
 
-// GET /api/skatespots
+// GET /api/cities
 function index(req, res) {
-    db.Cities.find({}, function(err, skatespot) {
+    db.City.find({}, function(err, city) {
         if (err) {
             res.send(err);
         }
-        res.json(skatespot);
+        res.json(city);
     });
 }
 
-//GET by id /api/skatespots/:id
+//GET by id /api/cities/:id
 function show(req, res) {
-    db.Cities.findById(req.params.skatespotId, function(err, foundSkatespot) {
+    db.City.findById(req.params.cityId, function(err, foundCity) {
         if (err) {
-            console.log('albumsSkatespot.show error', err);
+            console.log('citiesController.show error', err);
         }
-        console.log('albumsController.show responding with', foundSkatespot);
-        res.json(foundSkatespot);
+        console.log('citiesController.show responding with', foundCity);
+        res.json(foundCity);
     });
 }
 
-// POST /api/skatespots create spot
+// POST /api/cities create spot
 function create(req, res) {
-    db.Cities.create(req.body, function(err, skatespot) {
-        var pictures = req.body.pictures.split(',').map(function(item) {
-            return item.trim();
-        });
-        var features = req.body.features.split(',').map(function(item) {
-            return item.trim();
-        });
+    db.City.create(req.body, function(err, createdCity) { 
         if (err) {
             console.log("error", err);
         }
-        res.json(skatespot);
+        res.json(createdCity);
     });
 }
-//PUT /api/skatespots/:id update existing spot
+//PUT /api/cities/:id update existing spot
 function update(req, res) {
     console.log('updating with data', req.body);
     var updateData = req.body;
     var id = req.params.cityId;
     console.log(id);
-    db.Cities.findByIdAndUpdate(id, updateData, {new: true}, function(err, updatedCity) {
+    db.City.findByIdAndUpdate(id, updateData, {new: true}, function(err, updatedCity) {
         if (err) {
             console.log('updatedCity error', err);
         }
@@ -54,8 +48,8 @@ function update(req, res) {
 
 // Delete by ID
 function destroy(req, res) {
-    db.Cities.findOneAndRemove({
-        _id: req.params.skatespotId
+    db.City.findOneAndRemove({
+        _id: req.params.cityId
     }, function(err, cityToDelete) {
         if (err) {
             console.log(err, "unable to delete");
