@@ -18,10 +18,3 @@ function onSuccess(json) {
     console.log(skatespot);
   });
 }
-
-// $.get('/api/skatespots').success(function(skatespots){
-//   console.log(skatespots);
-//   skatespots.forEach(function(skatespot){
-//     renderAlbum(skatespot);
-//   });
-// });

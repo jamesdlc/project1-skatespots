@@ -9,18 +9,37 @@ var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
+// var db = require("./models"),
+//     // Post = db.Post,
+//     User = db.User;
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-// We'll serve jQuery and bootstrap from a local bower cache avoiding CDNs
-// We're placing these under /vendor to differentiate them from our own assets
+
 app.use('/vendor', express.static(__dirname + '/bower_components'));
 
 var controllers = require('./controllers');
 
-//Routes
+
+// // middleware for auth
+// app.use(cookieParser());
+// app.use(session({
+//     secret: 'runningThruThe6withMyWoes', // change this!
+//     resave: false,
+//     saveUninitialized: false
+// }));
+// app.use(passport.initialize());
+// app.use(passport.session());
+//
+// // passport config
+// passport.use(new passport.use(new LocalStrategy(User.authenticate())));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
+
+
+//* SKATESPOT ROUTES *//
 //GET Home Page
 app.get('/', function homepage(req, res) {
     res.sendFile(__dirname + '/views/index.html');
@@ -37,8 +56,21 @@ app.delete('/api/skatespots/:skatespotId', controllers.skatespots.destroy);
 //Updated by ID
 app.put('/api/skatespots/:skatespotId', controllers.skatespots.update);
 
+//* CITY ROUTES * //
 
-//////////////////////////////* AUTHENTICATION STUFF *////////////////////////////
+app.get('/api/cities', controllers.cities.index);
+//Show by Id
+app.get('/api/cities/:cityId', controllers.cities.show);
+//POST Create one
+app.post('/api/cities', controllers.cities.create);
+//Delete by ID
+app.delete('/api/cities/:cityId', controllers.cities.destroy);
+//Updated by ID
+app.put('/api/cities/:cityId', controllers.cities.update);
+
+
+//* AUTH ROUTES *//
+//
 // // show signup view
 // app.get('/signup', function (req, res) {
 //   res.render('signup'); // you can also use res.sendFile
@@ -50,30 +82,17 @@ app.put('/api/skatespots/:skatespotId', controllers.skatespots.update);
 //   User.register(new User({ username: req.body.username }), req.body.password,
 //     function (err, newUser) {
 //       passport.authenticate('local')(req, res, function() {
-//         res.redirect('/');
+//         res.send('signed up!!!');
 //       });
 //     }
 //   );
 // });
 //
-// //show login view
-// app.get('/login', function (req, res) {
-//   res.render('login'); // you can also use res.sendFile
-// });
-//
 // // log in user
 // app.post('/login', passport.authenticate('local'), function (req, res) {
 //   console.log(req.user);
-//   // res.send('logged in!!!'); // sanity check
-//   res.redirect('/'); // preferred!
-// });
-//
-// // log out user
-// app.get('/logout', function (req, res) {
-//   console.log("BEFORE logout", JSON.stringify(req.user));
-//   req.logout();
-//   console.log("AFTER logout", JSON.stringify(req.user));
-//   res.redirect('/');
+//   res.send('logged in!!!'); // sanity check
+//   // res.redirect('/'); // preferred!
 // });
 
 app.listen(process.env.PORT || 3000, function() {

@@ -2,15 +2,11 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="vendor/Materialize/bin/materialize.css"  media="screen,projection"/>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Skatespots</title>
   <!-- STYLESHEETS -->
-  <!-- <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/styles.css">
   <!-- VENDOR SCRIPTS -->
   <script src="vendor/jquery/dist/jquery.min.js"></script>
@@ -25,15 +21,20 @@
   <h1>Test</h1>
   <div id="skatespot">
     <script id="spots" type="text/x-handlebars-template">
-
-        {{name}}  test
-<br>
-        test {{location}}
-
+      <br>
+      {{name}}
+      <br>
+      {{location}}
+      <br>
+      {{security_guards}}
+      <br>
+        {{#each skatespot}}
+        <img src="{{pictures}}">
+        {{/each}}
     </script>
   </div>
-      <!--
-      <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script> -->
+  <!--
+  <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script> -->
 
-    </body>
-    </html>
+</body>
+</html>

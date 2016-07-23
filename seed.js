@@ -7,7 +7,7 @@ var skateSpotList =[
     security_guards: "True",
     difficulty_level: "Intermediate",
     features: "five-stair, handrail, ledge",
-    pictures:"/images/alaska1.jpg, /images/alaska2.jpg, /images/alaska3.jpg",
+    pictures:["/images/alaska1.jpg", "/images/alaska2.jpg","/images/alaska3.jpg"],
     tips:"Public park! Skate it allday!"
   },
   {
@@ -16,7 +16,7 @@ var skateSpotList =[
     security_guards: "False",
     difficulty_level: "Intermediate",
     features: "manual pads, hand rails, quarter pipe",
-    pictures:"/images/3rdandarmy.jpg, /images/3rdandarmypipe.jpg, /images/3rdandarmyquarterpipe.jpg",
+    pictures:["/images/3rdandarmy.jpg","/images/3rdandarmypipe.jpg","/images/3rdandarmyquarterpipe.jpg"],
     tips:"It gets cold towards the evening... bring a sweater"
   }
 ];
