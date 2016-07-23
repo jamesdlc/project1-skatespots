@@ -37,6 +37,45 @@ app.delete('/api/skatespots/:skatespotId', controllers.skatespots.destroy);
 //Updated by ID
 app.put('/api/skatespots/:skatespotId', controllers.skatespots.update);
 
+
+//////////////////////////////* AUTHENTICATION STUFF *////////////////////////////
+// // show signup view
+// app.get('/signup', function (req, res) {
+//   res.render('signup'); // you can also use res.sendFile
+// });
+//
+// // sign up new user, then log them in
+// // hashes and salts password, saves new user to db
+// app.post('/signup', function (req, res) {
+//   User.register(new User({ username: req.body.username }), req.body.password,
+//     function (err, newUser) {
+//       passport.authenticate('local')(req, res, function() {
+//         res.redirect('/');
+//       });
+//     }
+//   );
+// });
+//
+// //show login view
+// app.get('/login', function (req, res) {
+//   res.render('login'); // you can also use res.sendFile
+// });
+//
+// // log in user
+// app.post('/login', passport.authenticate('local'), function (req, res) {
+//   console.log(req.user);
+//   // res.send('logged in!!!'); // sanity check
+//   res.redirect('/'); // preferred!
+// });
+//
+// // log out user
+// app.get('/logout', function (req, res) {
+//   console.log("BEFORE logout", JSON.stringify(req.user));
+//   req.logout();
+//   console.log("AFTER logout", JSON.stringify(req.user));
+//   res.redirect('/');
+// });
+
 app.listen(process.env.PORT || 3000, function() {
     console.log('Express server is running on http://localhost:3000/');
 });
