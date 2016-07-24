@@ -49,7 +49,7 @@ function create(req,res){
 });
 }
 
-//PUT /api/skatespots/:id update existing spot
+//PUT /api/skatespots/:id update existing spo
 function update(req, res) {
   console.log('updating with data', req.body);
   var updateData = req.body;
