@@ -3,6 +3,7 @@ var db = require("./models");
 var skateSpotList =[
   {
     name:"anchorage park",
+    city: "Milpitas",
     address: "Alaska",
     security_guards: "True",
     difficulty_level: "Intermediate",
@@ -12,6 +13,7 @@ var skateSpotList =[
   },
   {
     name:"3rd & Army",
+    city: "Detroit",
     address: "1698 Indiana St, San Francisco, CA 94124",
     security_guards: "False",
     difficulty_level: "Intermediate",
@@ -30,30 +32,43 @@ var cityList =[
     state: "Michigan"
   }
 ];
-db.City.remove({}, function(err, city) {
-  if(err) {
-    console.log('Error occured in remove', err);
-  }
-  else {
-    console.log('removed all Cities');
-    db.City.create(cityList, function(err, city){
-      if (err){ return console.log("Error: ", err); }
-      console.log("Created new Cities", city);
-      process.exit();
-    });
-  }
-});
 
-db.Skatespot.remove({}, function(err, skatespot) {
-  if(err) {
-    console.log('Error occured in remove', err);
-  }
-  else {
-    console.log('removed all skatespots');
-    db.Skatespot.create(skateSpotList, function(err, skatespot){
-      if (err){ return console.log("Error: ", err); }
-      console.log("Created new Skatespots", skatespot);
-      process.exit();
+db.City.remove({}, function(err, cities) {
+  console.log("removed cities");
+  db.City.create(cityList, function(err, cities) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    db.Skatespot.remove({}, function(err, skatespots) {
+      console.log("removed skatespots");
+      skateSpotList.forEach(function(skateSpotValues) {
+        var newSpot = new db.Skatespot({
+          name: skateSpotValues.name,
+          address:skateSpotValues.address,
+          security_guards: skateSpotValues.security_guards,
+          difficulty_level: skateSpotValues.difficulty_level,
+          features: skateSpotValues.features,
+          pictures:skateSpotValues.pictures,
+          tips: skateSpotValues.tips
+        });
+        db.City.findOne({city_name: skateSpotValues.city}, function (err, cityId) {
+
+          if (err) {
+            console.log(err);
+            return;
+          }
+          newSpot.city = cityId;
+          newSpot.save(function(err, savedSpot) {
+            if (err) {
+              return console.log(err);
+            }
+            console.log(savedSpot);
+            console.log("created", cities.length, "new cities and", skateSpotList.length, "new skatespots");
+          });
+        });
+      });
     });
-  }
+
+  });
 });

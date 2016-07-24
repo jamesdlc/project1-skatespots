@@ -51,7 +51,6 @@ app.delete('/api/cities/:cityId', controllers.cities.destroy);
 //Updated by ID
 app.put('/api/cities/:cityId', controllers.cities.update);
 
-
 //spots by city id
 app.get('/api/cities/:cityId/skatespots',controllers.skatespots.spotsByCityId);
 

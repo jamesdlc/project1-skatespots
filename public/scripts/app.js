@@ -1,8 +1,9 @@
 $(document).ready(function(){
-
-  console.log('app.js loaded!');
+  //AJAX
   $.get('/api/skatespots', onSuccess);
+  navBar();
 });
+
 
 function renderAlbum(skatespot) {
   var skatespotHtml = $('#spots').html();
@@ -12,9 +13,29 @@ function renderAlbum(skatespot) {
 }
 
 function onSuccess(json) {
-  console.log('FOUND ALL PIECES');
+
   json.forEach(function(skatespot) {
     renderAlbum(skatespot);
     console.log(skatespot);
+  });
+}
+
+function navBar(){
+  var $button1 = $('.allskatespots');
+  var $button2 = $('.addskatespot');
+  var $button3 = $('.myskatespot');
+  var $button4 = $('.loginregister');
+
+  $button1.click(function() {
+    window.location = "http://localhost:3000/api/skatespots";
+  });
+  $button2.click(function() {
+    window.location = "http://localhost:3000/api/skatespots";
+  });
+  $button3.click(function() {
+    window.location = "http://localhost:3000/api/skatespots";
+  });
+  $button4.click(function() {
+    window.location = "http://localhost:3000/api/skatespots";
   });
 }

@@ -14,13 +14,14 @@ function index(req, res) {
 function show(req, res) {
   db.Skatespot.findById(req.params.skatespotId, function(err, foundSkatespot) {
     if (err) {
-      console.log('albumsSkatespot.show error', err);
+      console.log('foundSkatespot.show error', err);
     }
-    console.log('albumsController.show responding with', foundSkatespot);
+    console.log('afoundSkatespot.show responding with', foundSkatespot);
     res.json(foundSkatespot);
   });
 }
 
+// create spot associated with cityId
 function create(req,res){
   var cityId = req.params.cityId;
   var newSkatespot = new db.Skatespot({
