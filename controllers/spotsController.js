@@ -25,15 +25,13 @@ function create(req,res){
   var cityId = req.params.cityId;
   var newSkatespot = new db.Skatespot({
     name: req.body.name,
-    location: req.body.location,
+    address: req.body.address,
     security_guards: req.body.security_guards,
     difficulty_level: req.body.difficulty_level,
     features: req.body.features,
     pictures: req.body.pictures,
     tips: req.body.tips
   });
-  // // db.City.findById(cityId)
-  // // find the author from req.body
   db.City.findById(cityId, function(err, city){
     if (err) {
       return console.log(err);
@@ -68,9 +66,7 @@ function update(req, res) {
 
 // Delete by ID
 function destroy(req, res) {
-  db.Skatespot.findOneAndRemove({
-    _id: req.params.skatespotId
-  }, function(err, skatespotToDelete) {
+  db.Skatespot.findOneAndRemove({_id: req.params.skatespotId}, function(err, skatespotToDelete) {
     if (err) {
       console.log(err, "unable to delete");
     }
@@ -79,11 +75,30 @@ function destroy(req, res) {
   });
 }
 
+//get skatespots by cityId
+function spotsByCityId(req,res){
+  var cityId = req.params.cityId;
+  db.City.findById(cityId, function(err, city){
+    if (err) {
+      console.log(err);
+    }
+    db.Skatespot.find({city: city}, function (err, citySpots){
+      if (err){
+        console.log(citySpots + "test");
+      }
+      res.json(citySpots);
+    });
+  });
+}
+
+
+
 
 module.exports = {
   create: create,
   index: index,
   show: show,
   destroy: destroy,
-  update: update
+  update: update,
+  spotsByCityId: spotsByCityId
 };

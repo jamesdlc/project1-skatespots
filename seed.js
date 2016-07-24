@@ -3,29 +3,31 @@ var db = require("./models");
 var skateSpotList =[
   {
     name:"anchorage park",
-    location: "Alaska",
-    security_guards: "False",
+    address: "Alaska",
+    security_guards: "True",
     difficulty_level: "Intermediate",
     features: "five-stair, handrail, ledge",
     pictures:["/images/alaska1.jpg", "/images/alaska2.jpg","/images/alaska3.jpg"],
-    tips:"Public park! Skate it allday!"
+    tips:"Public park! Skate it allday!",
   },
   {
     name:"3rd & Army",
-    location: "1698 Indiana St, San Francisco, CA 94124",
+    address: "1698 Indiana St, San Francisco, CA 94124",
     security_guards: "False",
     difficulty_level: "Intermediate",
     features: "manual pads, hand rails, quarter pipe",
     pictures:["/images/3rdandarmy.jpg","/images/3rdandarmypipe.jpg","/images/3rdandarmyquarterpipe.jpg"],
-    tips:"It gets cold towards the evening... bring a sweater"
+    tips:"It gets cold towards the evening... bring a sweater",
   }
 ];
 var cityList =[
   {
-    name:"Milpitas"
+    city_name:"Milpitas",
+    state: "California"
   },
   {
-    name:"Detroit"
+    city_name:"Detroit",
+    state: "Michigan"
   }
 ];
 db.City.remove({}, function(err, city) {
@@ -41,7 +43,6 @@ db.City.remove({}, function(err, city) {
     });
   }
 });
-
 
 db.Skatespot.remove({}, function(err, skatespot) {
   if(err) {

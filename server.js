@@ -51,6 +51,10 @@ app.delete('/api/cities/:cityId', controllers.cities.destroy);
 //Updated by ID
 app.put('/api/cities/:cityId', controllers.cities.update);
 
+
+//spots by city id
+app.get('/api/cities/:cityId/skatespots',controllers.skatespots.spotsByCityId);
+
 app.listen(process.env.PORT || 3000, function() {
     console.log('Express server is running on http://localhost:3000/');
 });

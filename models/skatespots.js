@@ -4,8 +4,8 @@ var Schema = mongoose.Schema;
 
 var SkatespotsSchema = new Schema({
     name: String,
-    // city: {type: Schema.Types.ObjectId, ref: 'City'},
-    location: String,
+    city: {type: Schema.Types.ObjectId, ref: 'City'},
+    address: String,
     security_guards: Boolean,
     difficulty_level: String,
     features: [String],
