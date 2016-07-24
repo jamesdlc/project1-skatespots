@@ -16,8 +16,19 @@
   <script src="scripts/app.js"></script>
 
 </head>
+<body class="">
+  <div class="jumbotron col-md-12">
+  <h1>Skatespots</h1>
+  <p>rndrt</p>
+  <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
+</div>
+
 
 <div class="col-md-12 parent">
+  <button type="button" class="col-md-3 btn btn-default navbar-btn allskatespots">All Skatespots</button>
+  <button type="button" class="col-md-3 btn btn-default navbar-btn addskatespot">Add a Skatespot</button>
+  <button type="button" class="col-md-3 btn btn-default navbar-btn myskatespot">My Skatespots</button>
+  <button type="button" class="col-md-3 btn btn-default navbar-btn loginregister">Login/Register</button>
   <div class="col-md-6 child2">
     test
   </div>
@@ -25,6 +36,18 @@
     test
   </div>
   <div class="col-md-4 select1">
+    <div id="skatespot" class="col-md-6">
+      <script id="spots" type="text/x-handlebars-template">
+        <br>
+        {{name}}
+        <br>
+        {{location}}
+        <br>
+        {{security_guards}}
+        <br>
+        <img src="{{pictures}}">
+      </script>
+    </div>
     test
   </div>
   <div class="col-md-4 select2">
@@ -73,22 +96,8 @@
 
 
 
-<body class="brown lighten-1">
+
   <h1>Test</h1>
-  <div id="skatespot">
-    <script id="spots" type="text/x-handlebars-template">
-      <br>
-      {{name}}
-      <br>
-      {{location}}
-      <br>
-      {{security_guards}}
-      <br>
-
-        <img src="{{pictures}}">
-
-    </script>
-  </div>
   <!--
   <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script> -->
 
