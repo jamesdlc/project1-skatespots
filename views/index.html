@@ -25,8 +25,8 @@
 
 
   <div class="col-md-12 parent">
-    <button type="button" class="col-md-3 btn btn-default navbar-btn allskatespots">All Skatespots</button>
-    <button type="button" class="col-md-3 btn btn-default navbar-btn addskatespot">Add a Skatespot</button>
+    <a href="#all-skatespots"><button type="button" class="col-md-3 btn btn-default navbar-btn allskatespots">All Skatespots</button></a>
+    <a href="#add-skatespots"><button type="button" class="col-md-3 btn btn-default navbar-btn addskatespot">Add a Skatespot</button></a>
     <button type="button" class="col-md-3 btn btn-default navbar-btn myskatespot">My Skatespots</button>
     <button type="button" class="col-md-3 btn btn-default navbar-btn loginregister">Login/Register</button>
 
@@ -68,40 +68,41 @@
   <!-- ROW SPACER   -->
 
   <!-- FORM -->
+  <a name="add-skatespots">
   <div class="form-row col-md-3">
   </div>
   <div class="create-spot-form form-row col-md-6">
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">Skatespot Name</label>
+        <label>Skatespot Name</label>
         <input type="text" name="name" class="create-spot-form form-control form-name"  placeholder="Name">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">City</label>
+        <label>City</label>
         <input type="text" name="city" class="form-control form-city"  placeholder="City">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Address</label>
+        <label>Address</label>
         <input type="text" name="address" class="form-control form-address"  placeholder="Address">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Security Guards?</label>
+        <label>Security Guards?</label>
         <input type="text" name="security_guards" class="form-control" id="exampleInputEmail1" placeholder="Security Guards">
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Difficulty Level</label>
+        <label>Difficulty Level</label>
         <input type="text" name="difficulty_level" class="form-control" id="exampleInputEmail1" placeholder="Difficulty Level">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Features</label>
+        <label>Features</label>
         <input type="text" name="features" class="form-control"  placeholder="Features">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Pictures</label>
+        <label>Pictures</label>
         <input type="text" name="pictures" class="form-control"  placeholder="seperate image URL's with comma">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Tips</label>
+        <label>Tips</label>
         <input type="text" name="tips" class="form-control"  placeholder="Let us know!">
       </div>
       <div class="form-group">
@@ -115,6 +116,7 @@
 </div>
 <div class="form-row col-md-3">
 </div>
+</a>
 <!-- FORM -->
 
 <!-- ROW SPACER -->
@@ -125,36 +127,46 @@
 
 
 <div class="col-md-6 child2">
-
 </div>
 <div class="col-md-6 child22">
-
 </div>
-<div class="col-md-4 select1 row2">
-  <div id="skatespot" class="col-md-6">
 
-    <!-- HANDLEBARS -->
-    <script id="spots" type="text/x-handlebars-template">
-      <br>
-      {{name}}
-      <br>
-      {{location}}
-      <br>
-      {{security_guards}}
-      <br>
-      {{#each spots}}
+<!-- ROW SPACER -->
+<a name="all-skatespots">
+<div class="seperator1 col-md-12">
+  <div class="col-md-12 select1 row2">
+    <div id="skatespot" class="col-md-6">
 
-      <img src="{{pictures}}">
 
-      {{/each}}
-    </script>
-    <!-- HANDLEBARS -->
+      <!-- HANDLEBARS -->
+      <script id="spots" type="text/x-handlebars-template">
+        <div class="hbs-render">
+        <p>
+        name: {{name}}
+        <br>
+        address: {{address}}
+        <br>
+        security guards: {{security_guards}}
+        <br>
+        city: {{city}}
+        <br>
+        tips: {{tips}}
+        <br>
+        {{#each spots}}
+
+         pictures: <img src="{{pictures}}">
+
+        {{/each}}
+      </div>
+      </script>
+      <!-- HANDLEBARS -->
+    </div>
   </div>
 </div>
-<!-- ROW SPACER -->
-<div class="seperator1 col-md-12">
-</div>
+</a>
 <!-- ROW SPACER   -->
+
+
 </div>
 
 </body>

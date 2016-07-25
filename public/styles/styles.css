@@ -25,6 +25,7 @@ img{
 .seperator2{
   background-color: white;
   height:800px;
+  z-index: -1;
 }
 .home-image{
   padding: 0px !important;
@@ -38,4 +39,8 @@ img{
 
 .form-row{
   height: 500px;
+}
+
+.hbs-render{
+  color: white;
 }
