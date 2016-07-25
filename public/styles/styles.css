@@ -2,11 +2,15 @@
 .testimg1{
   background-color: green;
 }
+img{
+  border-radius: 75px;
+  border: 1px solid black;
+}
 .testimg2{
   background-color: blue;
 }
 .row1{
-  height: 500px;
+  height: 220px;
 }
 .row2{
   height: 300px;
@@ -16,6 +20,14 @@
 }
 .child2{
   background-color: blue;
+}
+.seperator{
+  background-color: white;
+  height: 25px;
+}
+.seperator1{
+  background-color: white;
+  height:550px;
 }
 
 .select1{
