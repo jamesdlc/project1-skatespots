@@ -81,7 +81,7 @@
                         <select name="city" id="city_name">
                             <script id="cities" type="text/x-handlebars-template">
                                 {{#each cities}}
-                                <option value="{{this._id}}">{{this.city_name}}</option>
+                                <option value="{{this._id}}">{{this.city_name}}, {{this.state}}</option>
                                 {{/each}}
                             </script>
                         </select>
