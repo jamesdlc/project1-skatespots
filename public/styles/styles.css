@@ -1,7 +1,4 @@
 
-.testimg1{
-  background-color: green;
-}
 img{
   border-radius: 75px;
   border: 1px solid black;
@@ -10,16 +7,10 @@ img{
   background-color: blue;
 }
 .row1{
-  height: 220px;
+  height: 280px;
 }
 .row2{
   height: 300px;
-}
-.imgcontainer3{
-  background-color: black;
-}
-.child2{
-  background-color: blue;
 }
 .seperator{
   background-color: white;
@@ -27,51 +18,5 @@ img{
 }
 .seperator1{
   background-color: white;
-  height:550px;
-}
-
-.select1{
-  background-color: yellow;
-}
-.select2{
-  background-color: red;
-}
-.select3{
-  background-color: orange;
-}
-.single1{
-  background-color:blue;
-}
-.single2{
-  background-color:white;
-}
-.single3{
-  background-color:orange;
-}
-.single4{
-  background-color:purple;
-}
-.single5{
-  background-color:green;
-}
-.single6{
-  background-color:brown;
-}
-.single7{
-  background-color:yellow;
-}
-.single8{
-  background-color:gray;
-}
-.single9{
-  background-color:red;
-}
-.single10{
-  background-color:maroon;
-}
-.single11{
-  background-color:orange;
-}
-.single12{
-  background-color:blue;
+  height:5px;
 }
