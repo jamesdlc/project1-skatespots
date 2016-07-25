@@ -13,6 +13,30 @@ function renderSkatespot(skatespot) {
     $('#skatespot').prepend(html);
 }
 
+$.ajax({
+    method: 'GET',
+    url: '/api/cities',
+    data: 'json',
+    success: renderCities,
+    error: citiesError
+});
+
+function citiesError(a, b, c) {
+    // console.log(b);
+    // console.log(c);
+}
+
+function renderCities(cities) {
+    console.log(cities);
+    var citiesHtml = $('#cities').html();
+    var citiesTemplate = Handlebars.compile(citiesHtml);
+    var renderedcities = citiesTemplate({
+        cities: cities
+    });
+    console.log(renderedcities);
+    $('#city_name').html(renderedcities);
+}
+
 function onSuccess(json) {
 
     json.forEach(function(skatespot) {
@@ -41,16 +65,16 @@ function navBar() {
     });
 }
 
-function formSubmit(){
-  $('.create-spot-form form').on("submit", function(e) {
-    e.preventDefault();
-    console.log("is this button firing");
-    var formData = $(this).serialize();
-    console.log(formData);
-    $.post('/api/skatespots', formData, function(skatespotdata) {
-      console.log("created new skatespot", skatespotdata);
-      renderSkatespot(skatespotdata);
-      $('.create-spot-form form').trigger("reset");
+function formSubmit() {
+    $('.create-spot-form form').on("submit", function(e) {
+        e.preventDefault();
+        console.log("is this button firing");
+        var formData = $(this).serialize();
+        console.log(formData);
+        $.post('/api/skatespots', formData, function(skatespotdata) {
+            console.log("created new skatespot", skatespotdata);
+            renderSkatespot(skatespotdata);
+            $('.create-spot-form form').trigger("reset");
+        });
     });
-  });
 }

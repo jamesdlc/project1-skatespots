@@ -56,6 +56,13 @@ app.put('/api/cities/:cityId', controllers.cities.update);
 //spots by city id
 app.get('/api/cities/:cityId/skatespots',controllers.skatespots.spotsByCityId);
 
+
+
+//* User Routes *//
+app.get('/login', controllers.user.login);
+app.get('/logout', controllers.user.logout);
+app.get('/signup', controllers.user.signup);
+
 app.listen(process.env.PORT || 3000, function() {
     console.log('Express server is running on http://localhost:3000/');
 });
