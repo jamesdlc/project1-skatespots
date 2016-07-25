@@ -21,8 +21,6 @@
     <div class=" col-md-12">
         <!-- <h1>Skatespots</h1> -->
         <img src="/images/skatespotslogo.png" class="logo">
-
-        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
     </div>
 
 
@@ -46,14 +44,6 @@
         <div class="col-md-2 row1">
         </div>
         <!-- IMAGE ONE -->
-
-
-
-        <!-- ROW SPACER -->
-        <!-- <div class="seperator col-md-12">
-  </div> -->
-        <!-- ROW SPACER   -->
-
 
 
         <!-- IMAGE TWO -->
@@ -83,77 +73,53 @@
                         <label>Skatespot Name</label>
                         <input type="text" name="name" class="create-spot-form form-control form-name" placeholder="Name">
                     </div>
-                    <!-- <div class="form-group">
-                        <label>City</label>
-                        <input type="text" name="city" class="form-control form-city" placeholder="City">
-                    </div> -->
 
                     <!-- CITY DROP DOWN GOES HERE -->
-                        <div class="dropdown">
-                            <label>City</label>
-                            <select id="city_name">
-                              <script id="cities" type="text/x-handlebars-template">
+                    <div class="dropdown">
+                        <label>City</label>
+                        <br>
+                        <select name="city" id="city_name">
+                            <script id="cities" type="text/x-handlebars-template">
                                 {{#each cities}}
                                 <option value="{{this._id}}">{{this.city_name}}</option>
                                 {{/each}}
-                              </script>
-                            </select>
-                        </div>
+                            </script>
+                        </select>
+                    </div>
+                    <p>
+
                     <!--  CITY DROP DOWN GOES HERE -->
-
-
 
                     <div class="form-group">
                         <label>Address</label>
                         <input type="text" name="address" class="form-control form-address" placeholder="Address">
                     </div>
+
+                    <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
                     <div class="dropdown">
                         <label>Security Guards?</label>
-
-                        <select id="security_guards">
-                            <option value="true">yes</option>
-                            <option value="false">no</option>
+                        <br>
+                        <select name="security_guards" id="security_guards">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
                         </select>
-                        <!-- <input type="text" name="security_guards" class="form-control" id="exampleInputEmail1" placeholder="Security Guards">
-        </div> -->
-
-                        <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
-                        <!-- <div class="dropdown"> -->
-                        <!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Security Guards?
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li>Yes</li>
-            <li>No</li>
-          </ul> -->
                     </div>
+                    <p>
                     <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
 
+  <!-- DIFFICULTY DROP DOWN GOES HERE -->
                     <div class="form-group">
-                        <label>Difficulty Level</label>
-                        <input type="text" name="difficulty_level" class="form-control" id="exampleInputEmail1" placeholder="Difficulty Level">
-                    </div>
-
-                    <!-- DIFFICULTY DROP DOWN GOES HERE -->
                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Dropdown
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-
-                            {{#each city_name}}
-                            <li><a href="">{{this}}</a></li>
-                            {{/each}}
-                            <!-- <li><a href="">Another action</a></li>
-            <li><a href="">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="">Separated link</a></li> -->
-                        </ul>
+                        <label>Difficulty Level</label>
+                        <br>
+                        <select name="difficulty_level" id="difficulty_level">
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>=
+                        </select>
                     </div>
+                    <p>
                     <!-- DIFFICULTY DROP DOWN GOES HERE -->
-
 
                     <div class="form-group">
                         <label>Features</label>
@@ -210,7 +176,7 @@
                                 <br> city: {{city}}
                                 <br> tips: {{tips}}
                                 <br> {{#each pictures}}
-                                 <img src="{{this}}" class="hbs-image"> {{/each}}
+                                <img src="{{this}}" class="hbs-image"> {{/each}}
                         </div>
                     </script>
                     <!-- HANDLEBARS -->
@@ -226,3 +192,52 @@
 </body>
 
 </html>
+
+<!-- DIFFICULTY DROP DOWN GOES HERE -->
+
+<!-- <input type="text" name="difficulty_level" class="form-control" id="exampleInputEmail1" placeholder="Difficulty Level">
+</div>
+
+<div class="dropdown">
+<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Dropdown
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+{{#each city_name}}
+<li><a href="">{{this}}</a></li>
+{{/each}}
+</ul>
+</div> -->
+
+<!-- <input type="text" name="security_guards" class="form-control" id="exampleInputEmail1" placeholder="Security Guards">
+</div> -->
+
+
+<!-- <div class="dropdown"> -->
+<!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+Security Guards?
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+<li>Yes</li>
+<li>No</li>
+</ul> -->
+
+
+
+<!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
+
+<!-- <li><a href="">Another action</a></li>
+<li><a href="">Something else here</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="">Separated link</a></li> -->
+
+
+
+
+<!-- <div class="form-group">
+<label>City</label>
+<input type="text" name="city" class="form-control form-city" placeholder="City">
+</div> -->

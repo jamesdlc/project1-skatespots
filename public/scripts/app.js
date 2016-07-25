@@ -3,6 +3,14 @@ $(document).ready(function() {
     $.get('/api/skatespots', onSuccess);
     // navBar();
     formSubmit();
+
+    $.ajax({
+      method: 'GET',
+      url: '/api/cities',
+      data: 'json',
+      success: renderCities,
+      error: citiesError
+    });
 });
 
 
@@ -13,13 +21,6 @@ function renderSkatespot(skatespot) {
     $('#skatespot').prepend(html);
 }
 
-$.ajax({
-    method: 'GET',
-    url: '/api/cities',
-    data: 'json',
-    success: renderCities,
-    error: citiesError
-});
 
 function citiesError(a, b, c) {
     // console.log(b);
@@ -27,13 +28,11 @@ function citiesError(a, b, c) {
 }
 
 function renderCities(cities) {
-    console.log(cities);
     var citiesHtml = $('#cities').html();
     var citiesTemplate = Handlebars.compile(citiesHtml);
     var renderedcities = citiesTemplate({
         cities: cities
     });
-    console.log(renderedcities);
     $('#city_name').html(renderedcities);
 }
 
