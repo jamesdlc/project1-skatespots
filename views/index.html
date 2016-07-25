@@ -30,38 +30,76 @@
     <button type="button" class="col-md-3 btn btn-default navbar-btn myskatespot">My Skatespots</button>
     <button type="button" class="col-md-3 btn btn-default navbar-btn loginregister">Login/Register</button>
 
-  <!-- IMAGE ONE -->
-  <div class="col-md-2 imgcontainer3">
-  </div>
-    <div class="col-md-8 imgcontainer1 row1">
-      <img src="/images/blue.png" alt="" class="img-rounded imgtest1 col-md-12">
+    <!-- IMAGE ONE -->
+    <div class="col-md-2 ">
     </div>
-    <div class="col-md-2 imgcontainer3">
+    <div class="col-md-8  row1">
+      IMAGE ONE
+      <img src="/images/blue.png" alt="" class="img-rounded home-image col-md-12">
     </div>
-    <!-- ROW SPACER -->
+    <div class="col-md-2 ">
+    </div>
+    <!-- IMAGE ONE -->
 
-<div class="seperator col-md-12">
-</div>
-<!-- ROW SPACER   -->
 
-  <!-- IMAGE TWO -->
-    <div class="col-md-2 imgcontainer3">
-    </div>
-    <div class="col-md-8 imgcontainer3">
-      <img src="/images/blue.png" alt="" class="img-rounded imgtest1 col-md-12">
-    </div>
-    <div class="col-md-2 imgcontainer3">
-    </div>
-      <!-- IMAGE TWO -->
 
     <!-- ROW SPACER -->
+    <div class="seperator col-md-12">
+    </div>
+    <!-- ROW SPACER   -->
 
-  <div class="seperator1 col-md-12">
 
-  </div>
-  <!-- ROW SPACER   -->
+
+    <!-- IMAGE TWO -->
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      IMAGE TWO
+      <img src="/images/blue.png" alt="" class="img-rounded home-image col-md-12">
+    </div>
+    <div class="col-md-2">
+    </div>
+    <!-- IMAGE TWO -->
+
+
+    <!-- ROW SPACER -->
+    <div class="seperator col-md-12">
+    </div>
+    <!-- ROW SPACER   -->
+
+    <div class="create-spot-form">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+
+    <!-- ROW SPACER -->
+    <div class="seperator2 col-md-12">
+    </div>
+    <!-- ROW SPACER   -->
+
+
+
     <div class="col-md-6 child2">
-      
+
     </div>
     <div class="col-md-6 child22">
 
@@ -78,10 +116,20 @@
           <br>
           {{security_guards}}
           <br>
+          {{#each spots}}
+
           <img src="{{pictures}}">
+
+          {{/each}}
         </script>
         <!-- HANDLEBARS -->
+      </div>
+    </div>
+    <!-- ROW SPACER -->
+    <div class="seperator1 col-md-12">
+    </div>
+    <!-- ROW SPACER   -->
+  </div>
 
-
-</body>
-</html>
+    </body>
+    </html>

@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 
 
-function renderAlbum(skatespot) {
+function renderSkatespot(skatespot) {
   var skatespotHtml = $('#spots').html();
   var skatespotTemplate = Handlebars.compile(skatespotHtml);
   var html = skatespotTemplate(skatespot);
@@ -15,7 +15,7 @@ function renderAlbum(skatespot) {
 function onSuccess(json) {
 
   json.forEach(function(skatespot) {
-    renderAlbum(skatespot);
+    renderSkatespot(skatespot);
     console.log(skatespot);
   });
 }

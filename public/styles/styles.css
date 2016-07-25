@@ -15,8 +15,16 @@ img{
 .seperator{
   background-color: white;
   height: 25px;
+  top: 50px;
 }
 .seperator1{
+  background-color: black;
+  height:1000px;
+}
+.seperator2{
   background-color: white;
-  height:5px;
+  height:800px;
+}
+.home-image{
+  padding: 0px !important;
 }
