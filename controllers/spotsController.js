@@ -92,7 +92,16 @@ function spotsByCityId(req,res){
   });
 }
 
+//create skatespot that DOESNT reference city ID
 
+function createSkatespot(req, res) {
+    db.Skatespot.create(req.body, function(err, createdSkatespot) {
+        if (err) {
+            console.log("error", err);
+        }
+        res.json(createdSkatespot);
+    });
+}
 
 
 module.exports = {
@@ -101,5 +110,6 @@ module.exports = {
   show: show,
   destroy: destroy,
   update: update,
-  spotsByCityId: spotsByCityId
+  spotsByCityId: spotsByCityId,
+  createSkatespot: createSkatespot
 };

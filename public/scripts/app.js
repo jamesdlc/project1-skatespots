@@ -3,17 +3,17 @@ $(document).ready(function(){
   $.get('/api/skatespots', onSuccess);
   navBar();
 
-  $('.create-spot-form').on("submit", function(e){
+  $('.create-spot-form form').on("submit", function(e){
     e.preventDefault();
     console.log("is this button firing");
-
     var formData = $(this).serialize();
-
-  $.post('/api/skatespots', formData, function(album){
-    console.log('album after POST', album);
-    renderAlbum(album);
+    console.log(formData);
+  $.post('/api/skatespots', formData, function(skatespotdata){
+    console.log("created new skatespot", skatespotdata);
+    renderSkatespot(skatespotdata);
     $(this).trigger("reset");
   });
+
 });
 
 

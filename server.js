@@ -38,6 +38,8 @@ app.post('/api/cities/:cityId/skatespots', controllers.skatespots.create);
 app.delete('/api/skatespots/:skatespotId', controllers.skatespots.destroy);
 //Updated by ID
 app.put('/api/skatespots/:skatespotId', controllers.skatespots.update);
+// Create one skatespot that DOESNT reference city ID
+app.post('/api/skatespots', controllers.skatespots.createSkatespot);
 
 //* CITY ROUTES * //
 
