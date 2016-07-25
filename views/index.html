@@ -45,91 +45,117 @@
 
     <!-- ROW SPACER -->
     <!-- <div class="seperator col-md-12">
-    </div> -->
-    <!-- ROW SPACER   -->
+  </div> -->
+  <!-- ROW SPACER   -->
 
 
 
-    <!-- IMAGE TWO -->
-    <div class="col-md-2 row2">
-    </div>
-    <div class="col-md-8 row2">
-      IMAGE TWO
-      <img src="/images/blue.png" alt="" class="img-rounded home-image home-image-2 col-md-12">
-    </div>
-    <div class="col-md-2 row2">
-    </div>
-    <!-- IMAGE TWO -->
-
-
-    <!-- ROW SPACER -->
-    <div class="seperator3 col-md-12">
-    </div>
-    <!-- ROW SPACER   -->
-
-    <div class="create-spot-form">
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputFile">File input</label>
-          <input type="file" id="exampleInputFile">
-          <p class="help-block">Example block-level help text here.</p>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Check me out
-          </label>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-
-    <!-- ROW SPACER -->
-    <div class="seperator2 col-md-12">
-    </div>
-    <!-- ROW SPACER   -->
-
-
-
-    <div class="col-md-6 child2">
-
-    </div>
-    <div class="col-md-6 child22">
-
-    </div>
-    <div class="col-md-4 select1 row2">
-      <div id="skatespot" class="col-md-6">
-
-        <!-- HANDLEBARS -->
-        <script id="spots" type="text/x-handlebars-template">
-          <br>
-          {{name}}
-          <br>
-          {{location}}
-          <br>
-          {{security_guards}}
-          <br>
-          {{#each spots}}
-
-          <img src="{{pictures}}">
-
-          {{/each}}
-        </script>
-        <!-- HANDLEBARS -->
-      </div>
-    </div>
-    <!-- ROW SPACER -->
-    <div class="seperator1 col-md-12">
-    </div>
-    <!-- ROW SPACER   -->
+  <!-- IMAGE TWO -->
+  <div class="col-md-2 row2">
   </div>
+  <div class="col-md-8 row2">
+    IMAGE TWO
+    <img src="/images/blue.png" alt="" class="img-rounded home-image home-image-2 col-md-12">
+  </div>
+  <div class="col-md-2 row2">
+  </div>
+  <!-- IMAGE TWO -->
 
-    </body>
-    </html>
+
+  <!-- ROW SPACER -->
+  <div class="seperator3 col-md-12">
+  </div>
+  <!-- ROW SPACER   -->
+
+  <!-- FORM -->
+  <div class="form-row col-md-3">
+  </div>
+  <div class="create-spot-form form-row col-md-6">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Skatespot Name</label>
+        <input type="" class="create-spot-form form-control form-name"  placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">City</label>
+        <input type="" class="form-control form-city"  placeholder="City">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Address</label>
+        <input type="" class="form-control form-address"  placeholder="Address">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Security Guards?</label>
+        <input type="" class="form-control" id="exampleInputEmail1" placeholder="Security Guards">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Difficulty Level</label>
+        <input type="" class="form-control" id="exampleInputEmail1" placeholder="Difficulty Level">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Features</label>
+        <input type="" class="form-control"  placeholder="Features">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Pictures</label>
+        <input type="" class="form-control"  placeholder="seperate image URL's with comma">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Tips</label>
+        <input type="" class="form-control"  placeholder="Let us know!">
+      </div>
+      <div class="form-group">
+
+        <p class="help-block">Example block-level help text here.</p>
+      </div>
+      <button type="submit" id="form-button" class="btn btn-default form-submit button"> WHERE IS MY SUBMIT BUTTON</button>
+    </div>
+
+  </form>
+</div>
+<div class="form-row col-md-3">
+</div>
+<!-- FORM -->
+
+<!-- ROW SPACER -->
+<div class="seperator2 col-md-12">
+</div>
+<!-- ROW SPACER   -->
+
+
+
+<div class="col-md-6 child2">
+
+</div>
+<div class="col-md-6 child22">
+
+</div>
+<div class="col-md-4 select1 row2">
+  <div id="skatespot" class="col-md-6">
+
+    <!-- HANDLEBARS -->
+    <script id="spots" type="text/x-handlebars-template">
+      <br>
+      {{name}}
+      <br>
+      {{location}}
+      <br>
+      {{security_guards}}
+      <br>
+      {{#each spots}}
+
+      <img src="{{pictures}}">
+
+      {{/each}}
+    </script>
+    <!-- HANDLEBARS -->
+  </div>
+</div>
+<!-- ROW SPACER -->
+<div class="seperator1 col-md-12">
+</div>
+<!-- ROW SPACER   -->
+</div>
+
+</body>
+</html>

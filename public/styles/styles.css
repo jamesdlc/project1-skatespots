@@ -35,3 +35,7 @@ img{
   height: 300px;
   z-index: -1;
 }
+
+.form-row{
+  height: 500px;
+}
