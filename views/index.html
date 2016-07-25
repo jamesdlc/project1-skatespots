@@ -17,9 +17,10 @@
 
 </head>
 <body class="">
-  <div class="jumbotron col-md-12">
-    <h1>Skatespots</h1>
-    <p>rndrt</p>
+  <div class=" col-md-12">
+    <!-- <h1>Skatespots</h1> -->
+    <img src="/images/skatespotslogo.png" class="logo">
+
     <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
   </div>
 
@@ -69,53 +70,107 @@
 
   <!-- FORM -->
   <a name="add-skatespots">
+    <div class="form-row col-md-3">
+    </div>
+    <div class="create-spot-form form-row col-md-6">
+      <form>
+        <div class="form-group">
+          <label>Skatespot Name</label>
+          <input type="text" name="name" class="create-spot-form form-control form-name"  placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" name="city" class="form-control form-city"  placeholder="City">
+        </div>
+
+        <!-- CITY DROP DOWN GOES HERE -->
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <!--  CITY DROP DOWN GOES HERE -->
+
+
+
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" name="address" class="form-control form-address"  placeholder="Address">
+        </div>
+        <div class="form-group">
+          <label>Security Guards?</label>
+          <input type="text" name="security_guards" class="form-control" id="exampleInputEmail1" placeholder="Security Guards">
+        </div>
+
+        <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
+
+        <div class="form-group">
+          <label>Difficulty Level</label>
+          <input type="text" name="difficulty_level" class="form-control" id="exampleInputEmail1" placeholder="Difficulty Level">
+        </div>
+
+        <!-- DIFFICULTY DROP DOWN GOES HERE -->
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <!-- DIFFICULTY DROP DOWN GOES HERE -->
+
+
+        <div class="form-group">
+          <label>Features</label>
+          <input type="text" name="features" class="form-control"  placeholder="Features">
+        </div>
+        <div class="form-group">
+          <label>Pictures</label>
+          <input type="text" name="pictures" class="form-control"  placeholder="seperate image URL's with comma">
+        </div>
+        <div class="form-group">
+          <label>Tips</label>
+          <input type="text" name="tips" class="form-control"  placeholder="Let us know!">
+        </div>
+        <div class="form-group">
+
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <button type="submit" id="form-button" class="btn btn-default form-submit button"> WHERE IS MY SUBMIT BUTTON</button>
+      </div>
+
+    </form>
+  </div>
   <div class="form-row col-md-3">
   </div>
-  <div class="create-spot-form form-row col-md-6">
-    <form>
-      <div class="form-group">
-        <label>Skatespot Name</label>
-        <input type="text" name="name" class="create-spot-form form-control form-name"  placeholder="Name">
-      </div>
-      <div class="form-group">
-        <label>City</label>
-        <input type="text" name="city" class="form-control form-city"  placeholder="City">
-      </div>
-      <div class="form-group">
-        <label>Address</label>
-        <input type="text" name="address" class="form-control form-address"  placeholder="Address">
-      </div>
-      <div class="form-group">
-        <label>Security Guards?</label>
-        <input type="text" name="security_guards" class="form-control" id="exampleInputEmail1" placeholder="Security Guards">
-      </div>
-      <div class="form-group">
-        <label>Difficulty Level</label>
-        <input type="text" name="difficulty_level" class="form-control" id="exampleInputEmail1" placeholder="Difficulty Level">
-      </div>
-      <div class="form-group">
-        <label>Features</label>
-        <input type="text" name="features" class="form-control"  placeholder="Features">
-      </div>
-      <div class="form-group">
-        <label>Pictures</label>
-        <input type="text" name="pictures" class="form-control"  placeholder="seperate image URL's with comma">
-      </div>
-      <div class="form-group">
-        <label>Tips</label>
-        <input type="text" name="tips" class="form-control"  placeholder="Let us know!">
-      </div>
-      <div class="form-group">
-
-        <p class="help-block">Example block-level help text here.</p>
-      </div>
-      <button type="submit" id="form-button" class="btn btn-default form-submit button"> WHERE IS MY SUBMIT BUTTON</button>
-    </div>
-
-  </form>
-</div>
-<div class="form-row col-md-3">
-</div>
 </a>
 <!-- FORM -->
 
@@ -133,38 +188,38 @@
 
 <!-- ROW SPACER -->
 <a name="all-skatespots">
-<div class="seperator1 col-md-12">
-  <div class="col-md-12 select1 row2">
-    <div id="skatespot" class="col-md-6">
+  <div class="seperator1 col-md-12">
+    <div class="col-md-12 select1 row2">
+      <div id="skatespot" class="col-md-6">
 
 
-      <!-- HANDLEBARS -->
-      <script id="spots" type="text/x-handlebars-template">
-        <div class="hbs-render">
-        <p>
-        name: {{name}}
-        <br>
-        address: {{address}}
-        <br>
-        security guards: {{security_guards}}
-        <br>
-        city: {{city}}
-        <br>
-        tips: {{tips}}
-        <br>
-        {{#each spots}}
+        <!-- HANDLEBARS -->
+        <script id="spots" type="text/x-handlebars-template">
+          <div class="hbs-render">
+            <p>
+              name: {{name}}
+              <br>
+              address: {{address}}
+              <br>
+              security guards: {{security_guards}}
+              <br>
+              city: {{city}}
+              <br>
+              tips: {{tips}}
+              <br>
+              {{#each spots}}
 
-         pictures: <img src="{{pictures}}">
+              pictures: <img src="{{pictures}}">
 
-        {{/each}}
+              {{/each}}
+            </div>
+          </script>
+          <!-- HANDLEBARS -->
+        </div>
       </div>
-      </script>
-      <!-- HANDLEBARS -->
     </div>
-  </div>
-</div>
-</a>
-<!-- ROW SPACER   -->
+  </a>
+  <!-- ROW SPACER   -->
 
 
 </div>

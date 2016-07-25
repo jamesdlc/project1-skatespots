@@ -2,18 +2,7 @@ $(document).ready(function() {
     //AJAX
     $.get('/api/skatespots', onSuccess);
     // navBar();
-
-    $('.create-spot-form form').on("submit", function(e) {
-        e.preventDefault();
-        console.log("is this button firing");
-        var formData = $(this).serialize();
-        console.log(formData);
-        $.post('/api/skatespots', formData, function(skatespotdata) {
-            console.log("created new skatespot", skatespotdata);
-            renderSkatespot(skatespotdata);
-            $('.create-spot-form form').trigger("reset");
-        });
-    });
+    formSubmit();
 });
 
 
@@ -50,4 +39,18 @@ function navBar() {
     $button4.click(function() {
         window.location = "http://localhost:3000/api/skatespots";
     });
+}
+
+function formSubmit(){
+  $('.create-spot-form form').on("submit", function(e) {
+    e.preventDefault();
+    console.log("is this button firing");
+    var formData = $(this).serialize();
+    console.log(formData);
+    $.post('/api/skatespots', formData, function(skatespotdata) {
+      console.log("created new skatespot", skatespotdata);
+      renderSkatespot(skatespotdata);
+      $('.create-spot-form form').trigger("reset");
+    });
+  });
 }
