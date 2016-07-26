@@ -1,47 +1,16 @@
-
-img{
-  border-radius: 15px;
-}
-
 .row1{
   height: 280px;
 }
 .row2{
-  height: 300px;
-  top: 60px;
-}
-
-.seperator{
-  background-color: red;
-}
-.seperator1{
-  top: 500px;
-  padding: 0px !important;
-  background-color: black;
-  height:1000px;
-  z-index: -1;
-}
-.seperator2{
-  background-color: white;
-  height:800px;
-  z-index: -1;
+  height: 500px;
+  top: 1000px;
+  /*background-color: black;*/
 }
 .home-image{
   padding: 0px !important;
 }
-.seperator3{
-  top:300px;
-  background-color: white;
-  height: 300px;
-  z-index: -1;
-}
-
 .form-row{
   height: 500px;
-}
-
-.hbs-render{
-  color: white;
 }
 .logo{
   height: 250px;
