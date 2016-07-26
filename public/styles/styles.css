@@ -23,3 +23,8 @@
 .parent{
   z-index: -1;
 }
+
+.all-parks{
+  border: 2px solid black;
+  border-radius: 10px;
+}
