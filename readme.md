@@ -1,6 +1,7 @@
-##Project-01, Skatespots
+#Project-01, Skatespots
+##Overview
 
-#Technologies Used
+##Technologies Used
 * JavaScript
 * jQuery
 * node.js
@@ -8,14 +9,14 @@
 * mongoose
 * handlebars
 
-#Existing features
+##Existing features
 * Working Endpoints
 * Ability to create Cities and Skatespots in database
 * View all Skatespots and Cities
 * Delete Skatespots
 * Working backend CRUD on both databases
 
-#Planned Features
+##Planned Features
 * User Login/Authentication
 * User profiles with the ability to create and manage Skatespots
 * Rating and Comment system
