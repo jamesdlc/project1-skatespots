@@ -11,7 +11,7 @@ $(document).ready(function() {
       error: citiesError
     });
 
-    $('#skatespot').on('click', '.delete-skatespot', handleDeleteAlbumClick);
+    $('#skatespot').on('click', '.delete-skatespot', deleteSkateSpotAlbumClick);
 
 });
 
@@ -45,29 +45,9 @@ function onSuccess(json) {
   console.log(json);
     json.forEach(function(skatespot) {
         renderSkatespot(skatespot);
-
     });
 }
 
-function navBar() {
-    var $button1 = $('.allskatespots');
-    var $button2 = $('.addskatespot');
-    var $button3 = $('.myskatespot');
-    var $button4 = $('.loginregister');
-
-    $button1.click(function() {
-        window.location = "http://localhost:3000/api/skatespots";
-    });
-    $button2.click(function() {
-        window.location = "http://localhost:3000/api/skatespots";
-    });
-    $button3.click(function() {
-        window.location = "http://localhost:3000/api/skatespots";
-    });
-    $button4.click(function() {
-        window.location = "http://localhost:3000/api/skatespots";
-    });
-}
 
 function formSubmit() {
     $('.create-spot-form form').on("submit", function(e) {
@@ -83,21 +63,16 @@ function formSubmit() {
     });
 }
 
-function handleDeleteAlbumClick(e) {
-  var albumId = $(this).attr('data-id');
-  console.log(albumId);
-  console.log('someone wants to delete album id=' + albumId );
+function deleteSkateSpotAlbumClick(e) {
+  var skatespotId = $(this).attr('data-id');
+  console.log(skatespotId);
+  console.log('someone wants to delete album id=' + skatespotId );
   $.ajax({
     method: 'DELETE',
-    url: ('/api/skatespots/' + albumId),
+    url: ('/api/skatespots/' + skatespotId),
     success: function() {
-      console.log('[data-id='+ albumId + ']');
-      $('[data-id='+ albumId + ']').remove();
+      console.log('[data-id='+ skatespotId + ']');
+      $('[data-id='+ skatespotId + ']').remove();
     }
   });
-}
-
-
-function deleteBookError() {
-  console.log('deletebook error!');
 }
