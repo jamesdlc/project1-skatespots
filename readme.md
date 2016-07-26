@@ -4,10 +4,10 @@
 ##Technologies Used
 * JavaScript
 * jQuery
-* node.js
-* bootstrap
-* mongoose
-* handlebars
+* Node.js
+* Bootstrap
+* Mongoose
+* Handlebars
 
 ##Existing features
 * Working Endpoints
@@ -22,3 +22,4 @@
 * Rating and Comment system
 * Sort Skatespots by Country and city
 * Ability to find spots closest to you
+<a href="http://imgur.com/RsM0JfA"><img src="http://i.imgur.com/RsM0JfA.png" title="source: imgur.com" /></a>
