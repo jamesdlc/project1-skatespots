@@ -6,6 +6,11 @@
   top: 1000px;
   /*background-color: black;*/
 }
+
+.form-row3{
+  top: 400px;
+  height:500px;
+}
 .home-image{
   padding: 0px !important;
 }
@@ -20,6 +25,10 @@
   height: 200px;
   width: 200px;
 }
+.hbs-render{
+  margin-top: 5px
+}
+
 .parent{
   z-index: -1;
 }
@@ -27,4 +36,12 @@
 .all-parks{
   border: 2px solid black;
   border-radius: 10px;
+}
+.jumbotron{
+  background-image: url("/images/banner.jpg");
+  background-size: cover;
+  height: 300px;
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }

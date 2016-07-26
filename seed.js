@@ -1,19 +1,19 @@
 var db = require("./models");
 
 var skateSpotList = [{
-    name: "anchorage park",
-    city: "Milpitas",
+    name: "Anchorage Park",
+    city: "Anchorage",
     address: "Alaska",
-    security_guards: "True",
-    difficulty_level: "Intermediate",
+    security_guards: "false",
+    difficulty_level: "Beginner",
     features: "five-stair, handrail, ledge",
     pictures: ["/images/alaska1.jpg", "/images/alaska2.jpg", "/images/alaska3.jpg"],
     tips: "Public park! Skate it allday!",
 }, {
     name: "3rd & Army",
-    city: "Detroit",
+    city: "SanFrancisco",
     address: "1698 Indiana St, San Francisco, CA 94124",
-    security_guards: "False",
+    security_guards: "false",
     difficulty_level: "Intermediate",
     features: "manual pads, hand rails, quarter pipe",
     pictures: ["/images/3rdandarmy.jpg", "/images/3rdandarmypipe.jpg", "/images/3rdandarmyquarterpipe.jpg"],

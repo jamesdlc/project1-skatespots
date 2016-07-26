@@ -2,6 +2,7 @@ $(document).ready(function() {
     renderAllSpots();
 
     formSubmit();
+    cityformSubmit();
 
     $.ajax({
       method: 'GET',
@@ -12,8 +13,8 @@ $(document).ready(function() {
     });
 
     $('#skatespot').on('click', '.delete-skatespot', deleteSkateSpotAlbumClick);
-
 });
+
 
 function renderAllSpots(){
   $.get('/api/skatespots', onSuccess);
@@ -59,6 +60,20 @@ function formSubmit() {
             console.log("created new skatespot", skatespotdata);
             renderSkatespot(skatespotdata);
             $('.create-spot-form form').trigger("reset");
+        });
+    });
+}
+
+function cityformSubmit() {
+    $('.create-city-form form').on("submit", function(e) {
+        e.preventDefault();
+        console.log("is this button firing");
+        var formData = $(this).serialize();
+        console.log(formData);
+        $.post('/api/cities', formData, function(citydata) {
+            console.log("created new city", citydata);
+            renderSkatespot(citydata);
+            $('.create-city-form form').trigger("reset");
         });
     });
 }
