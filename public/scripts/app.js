@@ -1,7 +1,6 @@
 $(document).ready(function() {
-    //AJAX
     renderAllSpots();
-    // navBar();
+
     formSubmit();
 
     $.ajax({
@@ -12,17 +11,10 @@ $(document).ready(function() {
       error: citiesError
     });
 
-    $('#skatespot').on('click', '.delete-skatespot', function() {
-      console.log("ARE YOU WORKING?");
-        console.log('clicked delete button to', '/api/skatespots/'+$(this).attr('data-id'));
-        $.ajax({
-          method: 'DELETE',
-          url: '/api/skatespots/'+$(this).attr('data-id'),
-          success: deleteBookSuccess,
-          error: deleteBookError
-        });
-      });
+    $('#skatespot').on('click', '.delete-skatespot', handleDeleteAlbumClick);
+
 });
+
 function renderAllSpots(){
   $.get('/api/skatespots', onSuccess);
 }
@@ -91,13 +83,19 @@ function formSubmit() {
     });
 }
 
-function deleteBookSuccess(json) {
-  var skatespot = json;
-  console.log(json);
-  var skatespotId = skatespot._id;
-  console.log('delete book', skatespotId);
-  renderAllSpots();
-  }
+function handleDeleteAlbumClick(e) {
+  var albumId = $(this).attr('data-id');
+  console.log(albumId);
+  console.log('someone wants to delete album id=' + albumId );
+  $.ajax({
+    method: 'DELETE',
+    url: ('/api/skatespots/' + albumId),
+    success: function() {
+      console.log('[data-id='+ albumId + ']');
+      $('[data-id='+ albumId + ']').remove();
+    }
+  });
+}
 
 
 function deleteBookError() {

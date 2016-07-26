@@ -168,7 +168,7 @@
 
                         <!-- HANDLEBARS -->
                         <script id="spots" type="text/x-handlebars-template">
-                            <div class="hbs-render" >
+                            <div class="hbs-render " data-id="{{_id}}">
                                 <p>
                                     {{_id}}
                                     <br> name: {{name}}
@@ -180,7 +180,7 @@
                                     <img src="{{this}}" class="hbs-image"> {{/each}}
 
                             </div>
-                            <button class='btn btn-secondary delete-skatespot' data-id={{_id}}>Delete Skatespot</button>
+                            <button class='btn btn-secondary delete-skatespot' data-id="{{_id}}" >Delete Skatespot</button>
                         </script>
                         <!-- HANDLEBARS -->
                     </div>
