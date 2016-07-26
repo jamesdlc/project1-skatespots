@@ -88,103 +88,105 @@
                     </div>
                     <p>
 
-                    <!--  CITY DROP DOWN GOES HERE -->
+                        <!--  CITY DROP DOWN GOES HERE -->
 
-                    <div class="form-group">
-                        <label>Address</label>
-                        <input type="text" name="address" class="form-control form-address" placeholder="Address">
-                    </div>
-
-                    <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
-                    <div class="dropdown">
-                        <label>Security Guards?</label>
-                        <br>
-                        <select name="security_guards" id="security_guards">
-                            <option value="true">Yes</option>
-                            <option value="false">No</option>
-                        </select>
-                    </div>
-                    <p>
-                    <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
-
-  <!-- DIFFICULTY DROP DOWN GOES HERE -->
-                    <div class="form-group">
-                    <div class="dropdown">
-                        <label>Difficulty Level</label>
-                        <br>
-                        <select name="difficulty_level" id="difficulty_level">
-                            <option value="Beginner">Beginner</option>
-                            <option value="Intermediate">Intermediate</option>
-                            <option value="Advanced">Advanced</option>=
-                        </select>
-                    </div>
-                    <p>
-                    <!-- DIFFICULTY DROP DOWN GOES HERE -->
-
-                    <div class="form-group">
-                        <label>Features</label>
-                        <input type="text" name="features" class="form-control" placeholder="Features">
-                    </div>
-                    <div class="form-group">
-                        <label>Pictures</label>
-                        <input type="text" name="pictures" class="form-control" placeholder="seperate image URL's with comma">
-                    </div>
-                    <div class="form-group">
-                        <label>Tips</label>
-                        <input type="text" name="tips" class="form-control" placeholder="Let us know!">
-                    </div>
-                    <div class="form-group">
-
-                        <p class="help-block">Example block-level help text here.</p>
-                    </div>
-                    <button type="submit" id="form-button" class="btn btn-default form-submit button"> WHERE IS MY SUBMIT BUTTON</button>
-            </div>
-
-            </form>
-    </div>
-    <div class="form-row col-md-3">
-    </div>
-    </a>
-    <!-- FORM -->
-
-    <!-- ROW SPACER -->
-    <div class="seperator2 col-md-12">
-    </div>
-    <!-- ROW SPACER   -->
-
-
-
-    <div class="col-md-6 child2">
-    </div>
-    <div class="col-md-6 child22">
-    </div>
-
-    <!-- ROW SPACER -->
-    <a name="all-skatespots">
-        <div class="seperator1 col-md-12">
-            <div class="col-md-12 select1 row2">
-                <div id="skatespot" class="col-md-12">
-
-
-                    <!-- HANDLEBARS -->
-                    <script id="spots" type="text/x-handlebars-template">
-                        <div class="hbs-render">
-                            <p>
-                                name: {{name}}
-                                <br> address: {{address}}
-                                <br> security guards: {{security_guards}}
-                                <br> city: {{city}}
-                                <br> tips: {{tips}}
-                                <br> {{#each pictures}}
-                                <img src="{{this}}" class="hbs-image"> {{/each}}
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" name="address" class="form-control form-address" placeholder="Address">
                         </div>
-                    </script>
-                    <!-- HANDLEBARS -->
+
+                        <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
+                        <div class="dropdown">
+                            <label>Security Guards?</label>
+                            <br>
+                            <select name="security_guards" id="security_guards">
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        <p>
+                            <!-- SECURITY GUARDS DROP DOWN GOES HERE -->
+
+                            <!-- DIFFICULTY DROP DOWN GOES HERE -->
+                            <div class="form-group">
+                                <div class="dropdown">
+                                    <label>Difficulty Level</label>
+                                    <br>
+                                    <select name="difficulty_level" id="difficulty_level">
+                                        <option value="Beginner">Beginner</option>
+                                        <option value="Intermediate">Intermediate</option>
+                                        <option value="Advanced">Advanced</option>=
+                                    </select>
+                                </div>
+                                <p>
+                                    <!-- DIFFICULTY DROP DOWN GOES HERE -->
+
+                                    <div class="form-group">
+                                        <label>Features</label>
+                                        <input type="text" name="features" class="form-control" placeholder="Features">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Pictures</label>
+                                        <input type="text" name="pictures" class="form-control" placeholder="seperate image URL's with comma">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tips</label>
+                                        <input type="text" name="tips" class="form-control" placeholder="Let us know!">
+                                    </div>
+                                    <div class="form-group">
+
+                                        <p class="help-block">Example block-level help text here.</p>
+                                    </div>
+                                    <button type="submit" id="form-button" class="btn btn-default form-submit button"> WHERE IS MY SUBMIT BUTTON</button>
+                            </div>
+
+                </form>
+            </div>
+            <div class="form-row col-md-3">
+            </div>
+        </a>
+        <!-- FORM -->
+
+        <!-- ROW SPACER -->
+        <div class="seperator2 col-md-12">
+        </div>
+        <!-- ROW SPACER   -->
+
+
+
+        <div class="col-md-6 child2">
+        </div>
+        <div class="col-md-6 child22">
+        </div>
+
+
+        <a name="all-skatespots">
+            <div class="seperator1 col-md-12">
+                <div class="col-md-12 select1 row2">
+
+                    <div id="skatespot" class="col-md-12 ">
+
+                        <!-- HANDLEBARS -->
+                        <script id="spots" type="text/x-handlebars-template">
+                            <div class="hbs-render" >
+                                <p>
+                                    {{_id}}
+                                    <br> name: {{name}}
+                                    <br> address: {{address}}
+                                    <br> security guards: {{security_guards}}
+                                    <br> city: {{city}}
+                                    <br> tips: {{tips}}
+                                    <br> {{#each pictures}}
+                                    <img src="{{this}}" class="hbs-image"> {{/each}}
+
+                            </div>
+                            <button class='btn btn-secondary delete-skatespot' data-id={{_id}}>Delete Skatespot</button>
+                        </script>
+                        <!-- HANDLEBARS -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </a>
-    <!-- ROW SPACER   -->
+        </a>
 
 
     </div>
@@ -192,52 +194,3 @@
 </body>
 
 </html>
-
-<!-- DIFFICULTY DROP DOWN GOES HERE -->
-
-<!-- <input type="text" name="difficulty_level" class="form-control" id="exampleInputEmail1" placeholder="Difficulty Level">
-</div>
-
-<div class="dropdown">
-<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-Dropdown
-<span class="caret"></span>
-</button>
-<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-
-{{#each city_name}}
-<li><a href="">{{this}}</a></li>
-{{/each}}
-</ul>
-</div> -->
-
-<!-- <input type="text" name="security_guards" class="form-control" id="exampleInputEmail1" placeholder="Security Guards">
-</div> -->
-
-
-<!-- <div class="dropdown"> -->
-<!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-Security Guards?
-<span class="caret"></span>
-</button>
-<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-<li>Yes</li>
-<li>No</li>
-</ul> -->
-
-
-
-<!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
-
-<!-- <li><a href="">Another action</a></li>
-<li><a href="">Something else here</a></li>
-<li role="separator" class="divider"></li>
-<li><a href="">Separated link</a></li> -->
-
-
-
-
-<!-- <div class="form-group">
-<label>City</label>
-<input type="text" name="city" class="form-control form-city" placeholder="City">
-</div> -->
