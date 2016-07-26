@@ -43,7 +43,7 @@ function renderCities(cities) {
 }
 
 function onSuccess(json) {
-  console.log(json);
+  // console.log(json);
     json.forEach(function(skatespot) {
         renderSkatespot(skatespot);
     });

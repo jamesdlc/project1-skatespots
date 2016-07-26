@@ -1,6 +1,7 @@
 var db = require("./models");
 
-var skateSpotList = [{
+var skateSpotList = [
+  {
     name: "Anchorage Park",
     city: "Anchorage",
     address: "Alaska",
@@ -9,7 +10,8 @@ var skateSpotList = [{
     features: "five-stair, handrail, ledge",
     pictures: ["/images/alaska1.jpg", "/images/alaska2.jpg", "/images/alaska3.jpg"],
     tips: "Public park! Skate it allday!",
-}, {
+},
+{
     name: "3rd & Army",
     city: "SanFrancisco",
     address: "1698 Indiana St, San Francisco, CA 94124",
@@ -18,7 +20,28 @@ var skateSpotList = [{
     features: "manual pads, hand rails, quarter pipe",
     pictures: ["/images/3rdandarmy.jpg", "/images/3rdandarmypipe.jpg", "/images/3rdandarmyquarterpipe.jpg"],
     tips: "It gets cold towards the evening... bring a sweater",
-}];
+},
+{
+    name: "Skate Park of Tampa",
+    city: "Tampa",
+    address: "4215 East Columbus Drive",
+    security_guards: "false",
+    difficulty_level: "Advanced",
+    features: "constantly changing setup, but there are always pyramids, handrail, quarterpipes, ledges, flatbars, an outdoor vert ramp and banks",
+    pictures: ["/images/skateparkoftampa.jpg"],
+    tips: "helmets are required",
+},
+{
+    name: "Louisville Extreme Park",
+    city: "Louisville",
+    address: "148 N. Clay St.",
+    security_guards: "false",
+    difficulty_level: "Advanced",
+    features: "Full pipe, bowls, ledges, hubbas, quarterpipes, manual pads, vert ramp, handrails and pyramids",
+    pictures: ["/images/louisvilleextremepark.jpg"],
+    tips: "They close at 11pm",
+}
+];
 var cityList = [{
         city_name: "Milpitas",
         state: "California"

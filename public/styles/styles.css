@@ -3,7 +3,7 @@
 }
 .row2{
   height: 500px;
-  top: 1000px;
+  top: 600px;
   /*background-color: black;*/
 }
 
@@ -44,4 +44,18 @@
   color: black;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+}
+.skatewallpaper{
+  top: 500px;
+  background-image: url("/images/skateparkwallpaper.jpg");
+  background-size: cover;
+  height: 700px;
+    padding: 0px !important;
+}
+.skatewallpaper2{
+  top: 300px;
+  background-image: url("/images/skatewallpaper2.jpg");
+  background-size: cover;
+  height: 700px;
+    padding: 0px !important;
 }
