@@ -4,6 +4,7 @@
 .row2{
   height: 500px;
   top: 600px;
+  /* TODO: Please remove commented code form production versions of your project -jc */
   /*background-color: black;*/
 }
 
