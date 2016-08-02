@@ -9,6 +9,7 @@ var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
+/* TODO: Please remove commented code form production versions of your project -jc */
 // var db = require("./models"),
 //     // Post = db.Post,
 //     User = db.User;
@@ -28,6 +29,7 @@ app.get('/', function homepage(req, res) {
     res.sendFile(__dirname + '/views/index.html');
 });
 app.get('/api/', controllers.api.index);
+/* Thank you for labelling all of your routes */
 //Index Show All
 app.get('/api/skatespots', controllers.skatespots.index);
 //Show by Id
